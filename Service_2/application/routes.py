@@ -2,8 +2,8 @@ from application import app
 import random
 
 
-@app.route('/randomphrase', methods=['GET'])
+@app.route('/piratename', methods=['GET'])
 def beginning():
-    list = ['You are a', 'Hey you', 'You want to', 'Sup my', 'How are', 'You happy', 'Can you']
+    list = ['Long John', 'Cpt. Cutlass', 'One Eye', "Ol' Stinky", 'Sharkbait', 'Black Beard', 'Salty']
 
     return list[random.randrange(6)]
