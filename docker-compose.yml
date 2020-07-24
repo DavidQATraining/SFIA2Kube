@@ -1,0 +1,57 @@
+version: "3.7"
+
+services: 
+
+    #nginx:
+    #    image: nginx
+    #    ports:
+    #        - "80:80"
+
+    service_1:
+        build: ./Service_1
+        container_name: service_1
+        #dockerfile: 
+        image: davidqatraining/service_1
+        ports: 
+            - "5000:5000"
+        networks: 
+            - sfia2_network
+        depends_on: 
+            - service_4
+            - service_2
+            - service_3
+            
+    service_2:
+        build: ./Service_2
+        container_name: service_2
+        image: davidqatraining/service_2
+        #ports:
+        networks: 
+            - sfia2_network    
+
+    service_3:
+        build: ./Service_3
+        container_name: service_3
+        image: davidqatraining/service_3
+        #ports:
+        networks: 
+            - sfia2_network
+
+    service_4:
+        build: ./Service_4
+        container_name: service_4
+        image: davidqatraining/service_4
+        #ports:
+        networks: 
+            - sfia2_network
+        environment: 
+            - SAMPLE=HELLO
+            #- DMCCA=${MYSQL}   #after export MYSQL=168.11.22.33 setting env variable
+            
+networks:
+    sfia2_network:
+        name: sfia2_network
+        driver: bridge
+    another_network:
+        driver: bridge
+    

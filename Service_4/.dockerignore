@@ -1,0 +1,20 @@
+#ignore all mark down files
+*.md
+
+#ignore hidden git folder
+.git
+
+#ignore gitignore file
+.gitignore
+
+# ignore dockerfile
+Dockerfile
+
+#ignore the docker ignore file
+.dockerignore
+
+#ignore venv
+venv
+
+#ignore __pycache__
+*/__pycache__
