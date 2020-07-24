@@ -2,8 +2,8 @@ from application import app
 import random
 
 
-@app.route('/randomphrase', methods=['GET'])
+@app.route('/piratename', methods=['GET'])
 def ending():
-    list = ['Okay', 'doing good', 'amazing feels', 'alright', 'enthusiasstic', 'well?', 'understanding?']
+    list = ['Dark Water', 'McBarrellgut', "O'Barnicles", 'The Peglegged', 'One-Ear', 'McGhee', 'Feathersword']
 
     return list[random.randrange(6)]
