@@ -4,17 +4,24 @@
             <title>
                 Pirate Name Generator
             </title>
+            <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@300&display=swap" rel="stylesheet">
+            <style>
+                .addfont {
+                    font-family: 'Grenze Gotisch', cursive;
+                    font-size: larger;
+                }
+            </style>
         </head>
         <body>
-            <h1>
+            <h1 class="addfont">
                 Pirate Name Generator Website
             </h1>
 
-            <p>
+            <p class="addfont">
                 {{ piratename }}
             </p>
 
-            <button onclick="window.location.reload();">
+            <button class="addfont" onclick="window.location.reload();">
                 Give Me My Pirate Name
             </button>
         </body>
