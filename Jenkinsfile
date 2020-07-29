@@ -35,6 +35,16 @@ pipeline {
 
         }
 
+        stage('Clean Stack') {
+
+            steps{
+
+                sh './scripts/clean.sh'
+
+            }
+
+        }
+
        
 
     }
