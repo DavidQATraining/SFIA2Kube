@@ -29,4 +29,3 @@ else
     docker pull davidqatraining/service_4
 fi
 
-docker rmi $(docker images -f "dangling=true" -q)
