@@ -41,8 +41,8 @@ def home():
         pirate_name=piratename
     )
     #post_data = Pirate.query.all()
-    db.session.add(post_data)
-    db.session.commit()
+    #db.session.add(post_data)
+    #db.session.commit()
     return render_template('index.html', post_data = piratename, title = 'Home')
 
 
