@@ -54,7 +54,7 @@ def home():
     response = requests.get('http://service_4:5003/piratename')
     print(response)
     piratename = response.text
-    post_data = Pirate(
+    post_data = pirate_names(
         pirate_name=piratename
     )
     print(piratename)
@@ -86,7 +86,7 @@ def createPirates():
 
 
 
-class pirate_name(db.Model):
+class pirate_names(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     pirate_name = db.Column(db.String(20), nullable=False)
 
