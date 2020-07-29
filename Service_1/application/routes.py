@@ -41,7 +41,7 @@ def home():
     post_data = Pirate(
         pirate_name=piratename
     )
-    return render_template('index.html', post_data = piratename, title = 'Home')
+    return render_template('index.html', piratename = piratename, title = 'Home')
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
