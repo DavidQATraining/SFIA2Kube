@@ -38,15 +38,11 @@ db = SQLAlchemy(app)
 
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def home():
-    
-    piratename = requests.get('http://service_4:5003/piratename')
-    print(piratename)
-    piratename = piratename.text
-    post_data = Pirate(
-        pirate_name=piratename
-    )
+    response = requests.get('http://service_4:5003/piratename')
+    print(response)
+    piratename = response.text
     return render_template('index.html', piratename = piratename, title = 'Home')
 
 # @app.route('/', methods=['GET'])
