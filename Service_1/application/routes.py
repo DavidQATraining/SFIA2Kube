@@ -1,5 +1,6 @@
 from application import app
 from flask import render_template, request
+from flask_sqlalchemy import SQLAlchemy
 import requests
 import random
 
@@ -34,7 +35,7 @@ def home():
     piratename = requests.get('http://service_4:5003/piratename')
     #print(piratename)
     #piratename = response.text
-    post_data = PirateName(
+    post_data = Pirate(
         pirate_name=piratename
     )
     post_data = Pirate.query.all()
