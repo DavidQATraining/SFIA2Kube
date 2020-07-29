@@ -32,15 +32,22 @@ db = SQLAlchemy(app)
 
 
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
+# @app.route('/', methods=['GET', 'POST'])
+# def home():
     
-    piratename = requests.get('http://service_4:5003/piratename')
-    print(piratename)
+#     piratename = requests.get('http://service_4:5003/piratename')
+#     print(piratename)
+#     piratename = response.text
+#     post_data = Pirate(
+#         pirate_name=piratename
+#     )
+#     return render_template('index.html', piratename = piratename, title = 'Home')
+
+@app.route('/', methods=['GET'])
+def home():
+    response = requests.get('http://service_4:5003/piratename')
+    print(response)
     piratename = response.text
-    post_data = Pirate(
-        pirate_name=piratename
-    )
     return render_template('index.html', piratename = piratename, title = 'Home')
 
 @app.route('/add', methods=['GET', 'POST'])
