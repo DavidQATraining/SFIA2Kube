@@ -43,7 +43,7 @@ def home():
     
     piratename = requests.get('http://service_4:5003/piratename')
     print(piratename)
-    piratename = response.text
+    piratename = piratename.text
     post_data = Pirate(
         pirate_name=piratename
     )
@@ -53,7 +53,7 @@ def home():
 # def home():
 #     response = requests.get('http://service_4:5003/piratename')
 #     print(response)
-#     piratename = response.text
+#     piratename = piratename.text
 #     post_data = pirate_names(
 #         pirate_name=piratename
 #     )
