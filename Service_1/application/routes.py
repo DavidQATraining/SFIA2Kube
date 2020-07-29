@@ -34,7 +34,10 @@ db = SQLAlchemy(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    
     piratename = requests.get('http://service_4:5003/piratename')
+    print(piratename)
+    piratename = response.text
     post_data = Pirate(
         pirate_name=piratename
     )
