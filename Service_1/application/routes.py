@@ -48,6 +48,12 @@ def home():
     response = requests.get('http://service_4:5003/piratename')
     print(response)
     piratename = response.text
+    post_data = Pirate(
+        pirate_name=piratename
+    )
+    print(piratename)
+    db.session.add(post_data)
+    db.session.commit()
     return render_template('index.html', piratename = piratename, title = 'Home')
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -64,8 +70,8 @@ def add():
 @app.route('/createPirates')
 def createPirates():
     db.create_all()
-    pirate = Pirates(f_name='Jorge')
-    pirate1 = Pirates(f_name='Kamaru')
+    pirate = Pirates(pirate_name='Jorge')
+    pirate1 = Pirates(pirate_name='Kamaru')
     db.session.add(pirate)
     db.session.add(pirate1)
 
