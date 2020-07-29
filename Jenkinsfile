@@ -25,15 +25,15 @@ pipeline {
 
         }
 
-        stage('Update Stack') {
-
-            steps{
-
-                sh './scripts/update_swarm.sh'
-
-            }
-
-        }
+//        stage('Update Stack') {
+//
+//            steps{
+//
+//                sh './scripts/update_swarm.sh'
+//
+//            }
+//
+//        }
 
         stage('Clean Stack') {
 
