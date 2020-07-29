@@ -86,7 +86,7 @@ def createPirates():
 
 
 
-class Pirate(db.Model):
+class pirate_name(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     pirate_name = db.Column(db.String(20), nullable=False)
 
