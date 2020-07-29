@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import requests
 import random
 from os import environ
+import os
 
 
 
