@@ -35,15 +35,7 @@ pipeline {
 
         }
 
-        stage('Clean') {
-
-            steps{
-
-                sh './scripts/clean.sh'
-
-            }
-
-        }
+       
 
     }
 
