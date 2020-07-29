@@ -3,6 +3,8 @@ from flask import render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import requests
 import random
+from os import environ
+
 
 
 # 3a617fb3dde7803d7e4513616c2973ee secret key
