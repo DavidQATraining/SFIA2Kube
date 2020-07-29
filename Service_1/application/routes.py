@@ -61,6 +61,18 @@ def add():
     return redirect(url_for('/'))
 
 
+@app.route('/createPirates')
+def createPirates():
+    db.create_all()
+    pirate = Pirates(f_name='Jorge')
+    pirate1 = Pirates(f_name='Kamaru')
+    db.session.add(pirate)
+    db.session.add(pirate1)
+
+    db.session.commit()
+    return 'Added the table and populated it with some records'
+
+
 
 class Pirate(db.Model):
     id = db.Column(db.Integer, primary_key=True)
