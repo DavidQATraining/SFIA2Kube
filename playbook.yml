@@ -17,4 +17,4 @@
   hosts: swarm-worker
   become: true
   roles:
-    - docker-swarm-add-workers
+    - docker-add-swarm

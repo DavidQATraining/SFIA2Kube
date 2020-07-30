@@ -26,9 +26,9 @@
     value: "{{ worker_token.stdout }}"
 
 - name: Output manager hostname
-    add_host:
-      name: "manager_hostname"
-      value: "{{ manager_hostname.stdout }}"
+  add_host:
+    name: "manager_hostname"
+    value: "{{ manager_hostname.stdout }}"
 
 # - name: Get manager node join-token
 #   shell: docker swarm join-token --quiet manager
