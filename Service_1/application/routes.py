@@ -5,7 +5,7 @@ import requests
 import random
 from os import environ
 import os
-from flask_mysqldb import MySQL
+#from flask_mysqldb import MySQL
 
 
 
