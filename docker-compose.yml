@@ -22,8 +22,13 @@ services:
             - service_3
         deploy:
             replicas: 2
- #       env_file:
-  #          - ./env.list
+        environment: 
+            - SECRET_KEY=${SECRET_KEY}   
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_PORT=${MYSQL_PORT}
+            - MYSQL_DB_NAME=${MYSQL_DB_NAME}
 
 # export SECRET_KEY=3a617fb3dde7803d7e4513616c2973ee
 # export MYSQL_USER=root
