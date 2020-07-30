@@ -5,7 +5,7 @@
   roles:
     - docker-installation
 
-- name: Install Docker-CE on Worker
+- name: Install Docker-CE on manager
   hosts: localhost
   connection: local
   become: true
