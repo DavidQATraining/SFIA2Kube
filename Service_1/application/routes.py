@@ -49,18 +49,18 @@ db = SQLAlchemy(app)
 #     piratename = response.text
 #     return render_template('index.html', piratename = piratename, title = 'Home')
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET'])
 def home():
     response = requests.get('http://service_4:5003/piratename')
-    piratename = response.text
+    print(response)
+    piratename = piratename.text
     post_data = pirate_names(
         pirate_name=piratename
     )
     print(piratename)
     db.session.add(post_data)
     db.session.commit()
-    print_data = pirate_names.query.all()
-    return render_template('index.html', piratename = piratename, post_data = post_data, print_data = print_data, title = 'Home')
+    return render_template('index.html', piratename = piratename, title = 'Home')
 
 # @app.route('/add', methods=['GET', 'POST'])
 # def add():
