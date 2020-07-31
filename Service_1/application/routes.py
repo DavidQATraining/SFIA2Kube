@@ -42,25 +42,25 @@ db = SQLAlchemy(app)
 
 
 
-@app.route('/', methods=['GET'])
-def home():
-    response = requests.get('http://service_4:5003/piratename')
-    print(response)
-    piratename = response.text
-    return render_template('index.html', piratename = piratename, title = 'Home')
-
 # @app.route('/', methods=['GET'])
 # def home():
 #     response = requests.get('http://service_4:5003/piratename')
 #     print(response)
-#     piratename = piratename.text
-#     post_data = pirate_names(
-#         pirate_name=piratename
-#     )
-#     print(piratename)
-#     db.session.add(post_data)
-#     db.session.commit()
+#     piratename = response.text
 #     return render_template('index.html', piratename = piratename, title = 'Home')
+
+@app.route('/', methods=['GET'])
+def home():
+    response = requests.get('http://service_4:5003/piratename')
+    print(piratename)
+    piratename = response.text
+    post_data = pirate_names(
+        pirate_name=piratename
+    )
+    print(piratename)
+    db.session.add(post_data)
+    db.session.commit()
+    return render_template('index.html', piratename = piratename, post_data = post_data,  title = 'Home')
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
@@ -91,8 +91,9 @@ class pirate_names(db.Model):
     pirate_name = db.Column(db.String(20), nullable=False)
 
     def __repr__(self):
-        return "".join(
+        return ''.join(
             [
+                'id: ' + self.id + '\n' 
                 'Name: ' + self.pirate_name 
 
             ]
