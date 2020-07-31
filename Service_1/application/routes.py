@@ -58,31 +58,11 @@ def home():
         pirate_name=piratename
     )
     print(piratename)
+    print_data = pirate_names.query.all()
     db.session.add(post_data)
     db.session.commit()
-    return render_template('index.html', piratename = piratename, title = 'Home')
+    return render_template('index.html', piratename = piratename, print_data = print_data, title = 'Home')
 
-# @app.route('/add', methods=['GET', 'POST'])
-# def add():
-
-#     post_data = Pirate(
-#         pirate_name=piratename
-#     )
-#     db.session.add(post_data)
-#     db.session.commit()
-#     return redirect(url_for('/'))
-
-
-@app.route('/createPirates')
-def createPirates():
-    db.create_all()
-    pirate = Pirates(pirate_name='Jorge')
-    pirate1 = Pirates(pirate_name='Kamaru')
-    db.session.add(pirate)
-    db.session.add(pirate1)
-
-    db.session.commit()
-    return 'Added the table and populated it with some records'
 
 
 
