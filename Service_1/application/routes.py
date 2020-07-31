@@ -49,7 +49,7 @@ db = SQLAlchemy(app)
 #     piratename = response.text
 #     return render_template('index.html', piratename = piratename, title = 'Home')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET','POST'])
 def home():
     response = requests.get('http://service_4:5003/piratename')
     piratename = response.text
@@ -60,7 +60,7 @@ def home():
     db.session.add(post_data)
     db.session.commit()
     print_data = pirate_names.query.all()
-    return render_template('index.html', piratename = piratename, print_data = print_data, title = 'Home')
+    return render_template('index.html', piratename = piratename, post_data = post_data, print_data = print_data, title = 'Home')
 
 # @app.route('/add', methods=['GET', 'POST'])
 # def add():
