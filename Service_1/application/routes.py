@@ -14,7 +14,7 @@ import os
 # export SECRET_KEY=3a617fb3dde7803d7e4513616c2973ee
 # export MYSQL_USER=root
 # export MYSQL_PASSWORD=hwg10IAR
-# export MYSQL_HOST=34.105.241.68
+# export MYSQL_HOST=34.105.182.1
 # export MYSQL_PORT=3306
 # export MYSQL_DB_NAME=sfia2db
 
@@ -52,7 +52,6 @@ db = SQLAlchemy(app)
 @app.route('/', methods=['GET'])
 def home():
     response = requests.get('http://service_4:5003/piratename')
-    print(piratename)
     piratename = response.text
     post_data = pirate_names(
         pirate_name=piratename
@@ -60,17 +59,18 @@ def home():
     print(piratename)
     db.session.add(post_data)
     db.session.commit()
-    return render_template('index.html', piratename = piratename, post_data = post_data,  title = 'Home')
+    print_data = pirate_names.query.all()
+    return render_template('index.html', piratename = piratename, print_data = print_data, title = 'Home')
 
-@app.route('/add', methods=['GET', 'POST'])
-def add():
+# @app.route('/add', methods=['GET', 'POST'])
+# def add():
 
-    post_data = Pirate(
-        pirate_name=piratename
-    )
-    db.session.add(post_data)
-    db.session.commit()
-    return redirect(url_for('/'))
+#     post_data = Pirate(
+#         pirate_name=piratename
+#     )
+#     db.session.add(post_data)
+#     db.session.commit()
+#     return redirect(url_for('/'))
 
 
 @app.route('/createPirates')
@@ -88,7 +88,7 @@ def createPirates():
 
 class pirate_names(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    pirate_name = db.Column(db.String(20), nullable=False)
+    pirate_name = db.Column(db.String(30), nullable=False)
 
     def __repr__(self):
         return ''.join(
