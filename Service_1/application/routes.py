@@ -49,7 +49,7 @@ db = SQLAlchemy(app)
 #     piratename = response.text
 #     return render_template('index.html', piratename = piratename, title = 'Home')
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     response = requests.get('http://service_4:5003/piratename')
     piratename = response.text
