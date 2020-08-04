@@ -22,8 +22,6 @@ services:
             - service_3
         deploy:
             replicas: 2
-        # env_file:
-        #     - ~/.dbenvs
         environment: 
             - SECRET_KEY=${SECRET_KEY}   
             - MYSQL_USER=${MYSQL_USER}
