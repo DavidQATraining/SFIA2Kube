@@ -58,7 +58,7 @@ def home():
         pirate_name=piratename
     )
     print(piratename)
-    print_data = pirate_names.query.all()
+    print_data = pirate_names.query.all().order_by('id').reverse()
     db.session.add(post_data)
     db.session.commit()
     return render_template('index.html', piratename = piratename, print_data = print_data, title = 'Home')
