@@ -27,15 +27,15 @@
             </div>
             <div class="content" >
                 <table class="table">
-                    <tr>
+                    <tr class="addfont">
                         <th>ID</th>&nbsp;
                         <th>Pirate Name</th>&nbsp;
                     </tr>
         
                     {% for pirate_name in print_data %}
                         <tr class="tableText">
-                            <td><p>{{ pirate_name.id }}</p>
-                            <td><p><b>{{ pirate_name.pirate_name }}</b></p></td>
+                            <td class="addfont"><p>{{ pirate_name.id }}</p>
+                            <td class="addfont"><p><b>{{ pirate_name.pirate_name }}</b></p></td>
                         </tr>
         
                     {% endfor %}
