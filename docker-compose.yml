@@ -66,9 +66,6 @@ services:
             - sfia2_network
         deploy:
             replicas: 2
-        #environment: 
-        #    - SAMPLE=HELLO
-            #- DMCCA=${MYSQL}   #after export MYSQL=168.11.22.33 setting env variable
         
     nginx:
         build:

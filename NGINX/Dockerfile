@@ -6,4 +6,3 @@ RUN apt install openssl -y
 RUN rm ./conf.d/default.conf
 RUN mv reverse_proxy.conf ../sites-available/
 RUN ln -s /etc/nginx/sites-available/reverse_proxy.conf sites-enabled/
-# COPY ./reverse_proxy.conf ./conf.d/
