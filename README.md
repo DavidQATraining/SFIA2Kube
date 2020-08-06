@@ -89,24 +89,16 @@ Having overshot my design for my SFIA1 project I was more realistic about the ex
 
 
 ## Risk Assessment
-<a href="https://ibb.co/w63vDQJ"><img src="https://i.ibb.co/C0Nrx9J/risk.png" alt="risk" border="0" /></a>
+<a href="https://ibb.co/Tw49zyb"><img src="https://i.ibb.co/fXkjmJn/risk-assessment.png" alt="risk-assessment" border="0">Risk Assessment</a>
 
 
 ## Difficulties and Lessons Learned
-The difficulties I faced completing the brief came mainly from technologies I hadn't used before. I hadn't used a VCS, linux or programmed in python before this project and new what I wanted to do but had to get over 
-the barrier of learning how these technologies operated. Linux was difficult for me at teh beginning as I had no experience working with, after I started to grasp the ideas of it though I felt myself make real progress.
-
-I had also never used Github before and that was a hurdle I had to get over, now I feel comfortable using it I can see the flexibility and robustness it adds to the software development process.
-
-As with learning anything in the theory phase it can often be hard to conceptualise ideas such as the CI pipeline. Having now dipped my toe and seen through my project how the individual aspect of devops join together it 
-has given me an deeper understanding and some context for the ideas learned in the coursework.
+I had a hard time at the beginning with the implimentation of docker but as time went on I started to pick up the role that it plays in the CI pipeline. As with any new technology the sytanx was unknown to me and also took a bit of time to get ym head around. This was much the same with NGINX and Ansible but after going through it with thr cohort and our trainer it became clear what each part played and the benifits of deploying using containerisation.
 
 ## Future Improvements
 The improvements I will add to the website are going to include:
-* Addition of User Favourites table and functionality allowing users to see their favourite fighters stats only.
-* Search system to search for a fighter using their name.
-* Filter system allowing for filtering of fighters based on weightclass, record etc.
-* Addition of Gym table allowing users to see where fighters train and all fighters housed at specific gyms.
+* I want to add a connection to google maps API so it can generate a random location for each pirate generated.
+* Improve the overall astetic of the web app, the table used scrolls endlessly out the btotm of the page.
 
 ## Author
 David McCartney 
