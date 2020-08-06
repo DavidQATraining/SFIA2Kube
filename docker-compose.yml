@@ -12,8 +12,8 @@ services:
         #container_name: service_1
         #dockerfile: 
         image: davidqatraining/service_1
-        ports: 
-            - "5000:5000"
+        # ports: 
+        #     - "5000:5000"
         networks: 
             - sfia2_network
         depends_on: 
@@ -66,9 +66,23 @@ services:
             - sfia2_network
         deploy:
             replicas: 2
-        #environment: 
-        #    - SAMPLE=HELLO
-            #- DMCCA=${MYSQL}   #after export MYSQL=168.11.22.33 setting env variable
+        
+    nginx:
+        build:
+            context: ./NGINX
+            dockerfile: Dockerfile
+        image: davidqatraining/nginxcont
+        ports:
+            - "80:80"
+        networks:
+            - sfia2_network
+        depends_on:
+            - service_4
+            - service_3
+            - service_2
+            - service_1
+        deploy:
+            replicas: 2
             
 networks:
     sfia2_network:

@@ -1,0 +1,5 @@
+# ignore dockerfile
+Dockerfile
+
+# ignore dockerignore
+.dockerignore
