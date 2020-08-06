@@ -61,7 +61,7 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 * CI Server: Jenkins
 * Containerisation: Docker, Docker-compose
 * Orchestration: Docker swarm 
-* Configuration managment: Ansible
+* Configuration management: Ansible
 * Run on Linux VM using GCP.
 * Reverse proxy webserver: NGINX
 
@@ -74,7 +74,7 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 * When a push happens on to the VCS it triggers the CI server Jenkins to build the live app again automatically so the changes are seen in the browser with minimal downtime.
 * On builds the images for the services are pushed to docker hub.
 * Ansible playbooks are used for configuration and setting roles, initilising the manager node then installing docker on the worker and adding the worker to the swarm.
-* The containerisation is handled by docker and orchestrated in docker swarm using manager a worker node roles.
+* The containerisation is handled by docker and orchestrated in docker swarm using manager and worker node roles.
 * NGINX is the web server service uses reverse proxy to access service 1 and also handles the load balancing between nodes.
 
 <a href="https://ibb.co/L0H1gzK"><img src="https://i.ibb.co/7SLKpJh/jenkins-dashboard.png" alt="jenkins-dashboard" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Jenkins Dashboard with build logs</a><br />
@@ -93,7 +93,7 @@ Having overshot my design for my SFIA1 project I was more realistic about the ex
 
 
 ## Difficulties and Lessons Learned
-I had a hard time at the beginning with the implimentation of docker but as time went on I started to pick up the role that it plays in the CI pipeline. As with any new technology the sytanx was unknown to me and also took a bit of time to get ym head around. This was much the same with NGINX and Ansible but after going through it with thr cohort and our trainer it became clear what each part played and the benifits of deploying using containerisation.
+I had a hard time at the beginning with the implimentation of docker but as time went on, I started to pick up the role that it plays in the CI pipeline. As with any new technology the sytanx was unknown to me and also took a bit of time to get ym head around. This was much the same with NGINX and Ansible but after going through it with thr cohort and our trainer it became clear what each part played and the benifits of deploying using containerisation.
 
 ## Future Improvements
 The improvements I will add to the website are going to include:
