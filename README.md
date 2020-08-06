@@ -98,7 +98,7 @@ I had a hard time at the beginning with the implimentation of docker but as time
 ## Future Improvements
 The improvements I will add to the website are going to include:
 * I want to add a connection to google maps API so it can generate a random location for each pirate generated.
-* Improve the overall astetic of the web app, the table used scrolls endlessly out the btotm of the page.
+* Improve the overall astetic of the web app, the table used scrolls endlessly out the bottom of the page.
 
 ## Author
 David McCartney 
