@@ -40,7 +40,12 @@ db = SQLAlchemy(app)
 def home():
     response = requests.get('http://service_4:5003/piratename')
     print(response)
+
     piratename = response.text
+
+    # Change for during presentation
+    #piratename = response.text + " YARR!"
+
     post_data = pirate_names(
         pirate_name=piratename
     )
@@ -55,7 +60,7 @@ def home():
 
 class pirate_names(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    pirate_name = db.Column(db.String(30), nullable=False)
+    pirate_name = db.Column(db.String(50), nullable=False)
 
     def __repr__(self):
         return ''.join(
