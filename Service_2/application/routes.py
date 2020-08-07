@@ -4,6 +4,7 @@ import random
 
 @app.route('/piratename', methods=['GET'])
 def beginning():
-    list = ['Long John', 'Cpt. Cutlass', 'One Eye', "Ol' Stinky", 'Sharkbait', 'Black Beard', 'Salty']
+#    list = ['Long John', 'Cpt. Cutlass', 'One Eye', "Ol' Stinky", 'Sharkbait', 'Black Beard', 'Salty']
 
+    list = ['Cutthroat', 'First Mate', 'Dread Pirate', "Cap'n", 'Admiral', 'Nigel', 'Spiky']
     return list[random.randrange(6)]

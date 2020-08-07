@@ -80,7 +80,6 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 <a href="https://ibb.co/L0H1gzK"><img src="https://i.ibb.co/7SLKpJh/jenkins-dashboard.png" alt="jenkins-dashboard" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>Jenkins Dashboard with build logs</a><br />
 
 ## Front-end Design
-
 Having overshot my design for my SFIA1 project I was more realistic about the expectations of the design required, so kept it relitivly simple with a pirate themed font. The first design only displayed the pirate name and then the second design came after the persisting data functionality was added.
 
 <a href="https://ibb.co/bQNqD7r"><img src="https://i.ibb.co/k5qkvMh/first-design.png" alt="first-design" border="0">Design 1</a>
