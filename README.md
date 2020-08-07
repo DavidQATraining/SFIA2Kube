@@ -77,8 +77,8 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 * The containerisation is handled by docker and orchestrated in docker swarm using manager and worker node roles.
 * NGINX is the web server service uses reverse proxy to access service 1 and also handles the load balancing between nodes.
 
-Here you see the current network and merge history of the project.
-<a href="https://ibb.co/6Yj3L6D"><img src="https://i.ibb.co/gyk5hst/feature-branch-model.png" alt="feature-branch-model" border="0">Git Insight</a>
+Here you see the current network and merge history of the project using feature branch model.
+<a href="https://ibb.co/4g6qcSv"><img src="https://i.ibb.co/cXGBP8f/feature-branch-model.png" alt="feature-branch-model" border="0">Git insight and network history</a>
 
 
 Here you see jenkins dashboard with latest builds.
