@@ -66,7 +66,7 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 * Reverse proxy webserver: NGINX
 
 ## CI Pipeline and Deployment
-<a href="https://ibb.co/j5kjsrx"><img src="https://i.ibb.co/59hJwRz/CI-Pipline.jpg" alt="CI-Pipline" border="0" />CI Pipeline</a>
+<a href="https://ibb.co/xj6kT14"><img src="https://i.ibb.co/VST14gK/CI-Pipline.jpg" alt="CI-Pipline" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>CI Pipeline</a><br />
 
 * The web app is programmed in python and flask using pycharm.
 * Changes are then pushed to the github repository where all changes are recorded and documented.
