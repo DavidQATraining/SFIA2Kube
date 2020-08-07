@@ -41,10 +41,10 @@ def home():
     response = requests.get('http://service_4:5003/piratename')
     print(response)
 
-#    piratename = response.text
+    piratename = response.text
 
     # Change for during presentation
-    piratename = response.text + " YARR!"
+    #piratename = response.text + " YARR!"
 
     post_data = pirate_names(
         pirate_name=piratename
