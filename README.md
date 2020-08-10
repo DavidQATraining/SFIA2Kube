@@ -103,7 +103,7 @@ Having overshot my design for my SFIA1 project I was more realistic about the ex
 
 
 ## Difficulties and Lessons Learned
-I had a hard time at the beginning with the implimentation of docker but as time went on, I started to pick up the role that it plays in the CI pipeline. As with any new technology the sytanx was unknown to me and also took a bit of time to get ym head around. This was much the same with NGINX and Ansible but after going through it with thr cohort and our trainer it became clear what each part played and the benifits of deploying using containerisation.
+I had a hard time at the beginning with the implimentation of docker but as time went on, I started to pick up the role that it plays in the CI pipeline. As with any new technology the sytanx was unknown to me and also took a bit of time to get my head around. This was much the same with NGINX and Ansible but after going through it with the cohort and our trainer it became clear what each part played and the benifits of deploying using containerisation.
 
 ## Retrospectives & Future Improvements
 Looking back on my sprints the only thing that caused a hold up was getting the enviroment variables into the jenkins machine without exposing any sensitive information to the open internet. After getting it to work locally I managed to get round this issue with a hidden file holding the variables. 
