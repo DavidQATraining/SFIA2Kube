@@ -74,7 +74,7 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 ## CI Pipeline and Deployment
 <a href="https://ibb.co/xj6kT14"><img src="https://i.ibb.co/VST14gK/CI-Pipline.jpg" alt="CI-Pipline" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>CI Pipeline</a><br />
 
-* The web app is programmed in python and flask using pycharm.
+* The web app is programmed in python and flask using VS code.
 * Changes are then pushed to the github repository where all changes are recorded and documented.
 * After a successful change has been made and functionality met this is reflected in the Trello boards.
 * When a push happens on to the VCS it triggers the CI server Jenkins to build the live app again automatically so the changes are seen in the browser with minimal downtime.
