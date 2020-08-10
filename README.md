@@ -15,7 +15,7 @@
 * Front-End Design
 * Risk Assessment
 * Difficulties and Lessons learned
-* Future Improvements
+* Retrospective & Future Improvements
 * Authors
 
 ## Brief
@@ -77,8 +77,8 @@ Here is the table for persisting data in a SQL database held on the cloud(GCP).
 * The containerisation is handled by docker and orchestrated in docker swarm using manager and worker node roles.
 * NGINX is the web server service uses reverse proxy to access service 1 and also handles the load balancing between nodes.
 
-Here you see the current network and merge history of the project.
-<a href="https://ibb.co/6Yj3L6D"><img src="https://i.ibb.co/gyk5hst/feature-branch-model.png" alt="feature-branch-model" border="0">Git Insight</a>
+Here you see the current network and merge history of the project using feature branch model.
+<a href="https://ibb.co/4g6qcSv"><img src="https://i.ibb.co/cXGBP8f/feature-branch-model.png" alt="feature-branch-model" border="0">Git insight and network history</a>
 
 
 Here you see jenkins dashboard with latest builds.
@@ -99,7 +99,9 @@ Having overshot my design for my SFIA1 project I was more realistic about the ex
 ## Difficulties and Lessons Learned
 I had a hard time at the beginning with the implimentation of docker but as time went on, I started to pick up the role that it plays in the CI pipeline. As with any new technology the sytanx was unknown to me and also took a bit of time to get ym head around. This was much the same with NGINX and Ansible but after going through it with thr cohort and our trainer it became clear what each part played and the benifits of deploying using containerisation.
 
-## Future Improvements
+## Retrospectives & Future Improvements
+Looking back on my sprints the only thing that caused a hold up was getting the enviroment variables into the jenkins machine without exposing any sensitive information to the open internet. After getting it to work locally I managed to get round this issue with a hidden file holding the variables. 
+
 The improvements I will add to the website are going to include:
 * I want to add a connection to google maps API so it can generate a random location for each pirate generated.
 * Improve the overall astetic of the web app, the table used scrolls endlessly out the bottom of the page.
