@@ -40,6 +40,12 @@ The project I came up wth was a pirate name genarator split across 4 services. S
 * Service 2 receives the GET request from service 4 and sends back the first part of the pirate name.
 * Service 3 receives the GET request from service 4 and sends back the second part of the pirate name.
 
+The changes to be made during demo and build to the live app will implement the following funtionality.
+* Service 1 also adds "YARR!" to the end of the pirate name.
+* Service 4 also adds "Presenting " to the front of the name.
+* Service 2 now has a new list of pirate first names.
+* Service 3 now has a new list of pirate last names.
+
 
 <a href="https://ibb.co/nmf2vp4"><img src="https://i.ibb.co/LR6wWKB/GET.png" alt="GET" border="0" />Services</a>
  
