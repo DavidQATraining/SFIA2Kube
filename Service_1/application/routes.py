@@ -9,14 +9,7 @@ import os
 
 
 
-# 3a617fb3dde7803d7e4513616c2973ee secret key
 
-# export SECRET_KEY=3a617fb3dde7803d7e4513616c2973ee
-# export MYSQL_USER=root
-# export MYSQL_PASSWORD=hwg10IAR
-# export MYSQL_HOST=34.105.182.1
-# export MYSQL_PORT=3306
-# export MYSQL_DB_NAME=sfia2db
 
 
 app.config['SECRET_KEY'] = environ.get('SECRET_KEY')
