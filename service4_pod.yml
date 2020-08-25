@@ -14,7 +14,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-    name: my-deployment
+    name: service-4
 spec:
     selector:
         matchLabels: 
@@ -28,6 +28,6 @@ spec:
             hostname: service-4
             containers:
             - name: service-4
-              image: davidqatraining/service_4
+              image: davidqatraining/service-4
               ports:
               - containerPort: 5003

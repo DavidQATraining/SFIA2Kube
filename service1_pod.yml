@@ -11,12 +11,10 @@ spec:
           targetPort: 5000
     type: ClusterIP
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-    name: my-deployment
-    
+    name: service-1
 spec:
     selector:
         matchLabels: 
@@ -30,9 +28,6 @@ spec:
             hostname: service-1
             containers:
             - name: service-1
-              image: davidqatraining/service_1
+              image: davidqatraining/service-1
               ports:
               - containerPort: 5000
-              envFrom:
-                - configMapKeyRef:
-                  name: my-configmap 
