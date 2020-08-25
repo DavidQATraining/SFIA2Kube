@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata: 
+    name: service-3
+spec:
+    selector: 
+        app: service-3
+    ports:
+        - protocol: TCP
+          port: 5002
+          targetPort: 5002
+    type: ClusterIP
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: my-deployment
+spec:
+    selector:
+        matchLabels: 
+            app: service-3
+    replicas: 3
+    template: 
+        metadata: 
+            labels:
+                app: service-3
+        spec:
+            hostname: service-3
+            containers:
+            - name: service-3
+              image: davidqatraining/service_3
+              ports:
+              - containerPort: 5002

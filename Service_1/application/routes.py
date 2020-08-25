@@ -31,7 +31,7 @@ db = SQLAlchemy(app)
 
 @app.route('/', methods=['GET'])
 def home():
-    response = requests.get('http://service_4:5003/piratename')
+    response = requests.get('http://service-4:5003/piratename')
     print(response)
 
     #piratename = response.text
